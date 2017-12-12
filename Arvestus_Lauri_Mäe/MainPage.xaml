@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="Arvestus_Lauri_Mäe.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Arvestus_Lauri_Mäe"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="2" Canvas.ZIndex="1">
+            <TextBox x:Name="usernameBox" PlaceholderText="Kasutajanimi"></TextBox>
+            <PasswordBox x:Name="passwordBox" PlaceholderText="Parool" Margin="0,25,0,0"></PasswordBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column="3" Grid.Row="3" Grid.ColumnSpan="2" Canvas.ZIndex="1">
+            <Button x:Name="signInBtn" Content="Logi sisse" HorizontalAlignment="Right" Click="signInBtn_Click"></Button>
+            <TextBlock x:Name="errorLabel" HorizontalAlignment="Right" Foreground="Red" Margin="0,19.5,0,0" FontWeight="Bold"></TextBlock>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="5">
+            <StackPanel.Background>
+                <SolidColorBrush Color="#FF468ED6" Opacity="0.3"/>
+            </StackPanel.Background>
+        </StackPanel>
+    </Grid>
+</Page>
